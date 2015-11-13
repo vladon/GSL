@@ -19,18 +19,18 @@
 #ifndef GSL_SPAN_H
 #define GSL_SPAN_H
 
-#include <new>
-#include <stdexcept>
+#include <algorithm>
+#include <array>
 #include <cstddef>
 #include <cstdint>
+#include <functional>
+#include <iterator>
 #include <limits>
+#include <new>
 #include <numeric>
+#include <stdexcept>
 #include <type_traits>
 #include <utility>
-#include <array>
-#include <iterator>
-#include <algorithm>
-#include <functional>
 #include "fail_fast.h"
 
 #ifdef _MSC_VER
@@ -55,6 +55,7 @@
 // turn off some misguided warnings
 #pragma warning(push)
 #pragma warning(disable: 4351) // warns about newly introduced aggregate initializer behavior
+#pragma warning(disable: 4512) // warns that assignment op could not be generated
 
 #endif // _MSC_VER <= 1800
 
